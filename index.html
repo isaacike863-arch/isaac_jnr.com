@@ -1,73 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Isaac Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isaac Jr | Football Profile</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background-color: #0f172a;
-            color: white;
-            text-align: center;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
 
-        header {
-            background: #1e293b;
-            padding: 20px;
-        }
+body{
+    color:white;
+    text-align:center;
+}
 
-        img {
-            border-radius: 50%;
-            margin-top: 20px;
-        }
+/* VIDEO BACKGROUND */
+#bg-video{
+    position:fixed;
+    right:0;
+    bottom:0;
+    min-width:100%;
+    min-height:100%;
+    z-index:-1;
+    object-fit:cover;
+}
 
-        .card {
-            background: #1e293b;
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%;
-            border-radius: 10px;
-        }
+/* OVERLAY */
+.overlay{
+    background:rgba(0,0,0,0.6);
+    min-height:100vh;
+    padding:30px;
+}
 
-        h1, h2, h3 {
-            color: #38bdf8;
-        }
-    </style>
+/* PROFILE */
+.profile img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:3px solid #00aaff;
+}
+
+h1{
+    margin-top:10px;
+    color:#00aaff;
+}
+
+.role{
+    margin:5px 0;
+    font-size:18px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin:20px 0;
+}
+
+.stats div{
+    font-size:18px;
+}
+
+/* VIDEO */
+video{
+    width:90%;
+    max-width:400px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+/* ABOUT */
+.about{
+    max-width:600px;
+    margin:30px auto;
+    line-height:1.6;
+}
+
+/* SOCIAL */
+.social a{
+    display:block;
+    color:#00aaff;
+    margin:5px;
+    text-decoration:none;
+}
+
+/* CONTACT */
+.contact{
+    margin-top:20px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Isaac Jr</h1>
-    <p>Web Developer (Beginner)</p>
+<video autoplay muted loop id="bg-video">
+    <source src="bg.mp4" type="video/mp4">
+</video>
 
-    <button onclick="alert('Thanks for visiting!')">Click Me</button>
-</header>
+<div class="overlay">
 
-<img src="profile.jpg" width="150">
+    <!-- PROFILE -->
+    <div class="profile">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h1>Isaac Jr</h1>
+        <p class="role">Right Winger ⚽</p>
+        <p>Young footballer from Ghana 🇬🇭</p>
+        <p>Age: 13</p>
+        <p>A dream chaser with big goals</p>
+    </div>
 
-<div class="card">
-    <h2>About Me</h2>
-    <p>Coming soon...</p>
+    <!-- STATS -->
+    <div class="stats">
+        <div>10<br>Goals</div>
+        <div>7<br>Assists</div>
+        <div>90<br>Speed</div>
+    </div>
 
-    <h2>Contact</h2>
-    <p>Email: isaacike863@gmail.com</p>
-    <p>I am learning web development and building my first website.</p>
-</div>
+    <!-- HIGHLIGHT VIDEO -->
+    <h2>Highlights 🎬</h2>
+    <video controls>
+        <source src="highlight.mp4" type="video/mp4">
+    </video>
 
-<div class="card">
-    <h2>Skills</h2>
-    <p>HTML (learning), CSS (basic)</p>
-</div>
+    <!-- ABOUT -->
+    <div class="about">
+        <h2>About Me</h2>
+        <p>
+        Hi, I'm Isaac, a 13-year-old aspiring footballer with a strong passion for the game.
+        I play as a right winger, using my speed and creativity to help my team attack.
+        My biggest inspiration is Lionel Messi, and I am a proud supporter of FC Barcelona.
+        I am also learning web development and building my own projects as I grow on and off the field.
+        </p>
+    </div>
 
-<div class="card">
-    <h2>Contact</h2>
-    <p>Instagram: Isaac_Jnr30</p>
-    <p>TikTok: Isaac_Jnr30</p>
+    <!-- SOCIAL -->
+    <div class="social">
+        <h2>Social Media</h2>
+        <a href="#">Instagram: Isaac_Jnr30</a>
+        <a href="#">TikTok: Isaac_Jnr30</a>
+        <a href="#">YouTube: Isaac_Jnr30</a>
+    </div>
 
-    <h3>Business Contact</h3>
-    <p>Email: isaacike863@gmail.com</p>
+    <!-- CONTACT -->
+    <div class="contact">
+        <h2>Contact</h2>
+        <p>Email: isaacike863@gmail.com</p>
+        <p>Phone: +233536731019</p>
+        <p>Business: isaacike863@gmail.com</p>
+    </div>
+
 </div>
 
 </body>
