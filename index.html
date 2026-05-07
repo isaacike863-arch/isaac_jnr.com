@@ -3,157 +3,462 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Isaac Jr | Football Profile</title>
+
+<title>Isaac Jr | Official Football Portfolio</title>
 
 <style>
+
+/* RESET */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
+/* BODY */
 body{
-    color:white;
-    text-align:center;
+  font-family:Arial, sans-serif;
+  color:white;
+  background:
+  linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+  url('images/football-bg.jpg');
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  overflow-x:hidden;
 }
 
-/* VIDEO BACKGROUND */
-#bg-video{
-    position:fixed;
-    right:0;
-    bottom:0;
-    min-width:100%;
-    min-height:100%;
-    z-index:-1;
-    object-fit:cover;
+/* NAVBAR */
+nav{
+  width:100%;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  top:0;
+  z-index:1000;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
 }
 
-/* OVERLAY */
-.overlay{
-    background:rgba(0,0,0,0.6);
-    min-height:100vh;
-    padding:30px;
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  color:#00ff88;
+  letter-spacing:2px;
 }
 
-/* PROFILE */
-.profile img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    border:3px solid #00aaff;
+nav ul{
+  display:flex;
+  list-style:none;
 }
 
-h1{
-    margin-top:10px;
-    color:#00aaff;
+nav ul li{
+  margin-left:25px;
 }
 
-.role{
-    margin:5px 0;
-    font-size:18px;
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
 }
 
+nav ul li a:hover{
+  color:#00ff88;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero-content h1{
+  font-size:90px;
+  color:#00ff88;
+  text-shadow:0 0 25px rgba(0,255,136,0.7);
+}
+
+.hero-content p{
+  font-size:24px;
+  color:#ddd;
+  margin-top:15px;
+}
+
+.hero-content a{
+  display:inline-block;
+  margin-top:35px;
+  padding:15px 35px;
+  background:#00ff88;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:50px;
+  transition:0.3s;
+}
+
+.hero-content a:hover{
+  transform:scale(1.05);
+  background:white;
+}
+
+/* MAIN IMAGE */
+.main-photo{
+  display:flex;
+  justify-content:center;
+  margin-top:-80px;
+}
+
+.main-photo img{
+  width:90%;
+  max-width:850px;
+  border-radius:25px;
+  box-shadow:0 0 30px rgba(0,255,136,0.5);
+}
+
+/* SECTIONS */
+section{
+  width:90%;
+  max-width:1200px;
+  margin:80px auto;
+  background:rgba(255,255,255,0.05);
+  padding:40px;
+  border-radius:25px;
+  backdrop-filter:blur(8px);
+  box-shadow:0 0 25px rgba(0,0,0,0.5);
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#00ff88;
+  font-size:42px;
+}
+
+section p{
+  text-align:center;
+  line-height:1.8;
+  color:#ddd;
+  font-size:18px;
+}
+
+/* PLAYER STATS */
 .stats{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin:20px 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:30px;
 }
 
-.stats div{
-    font-size:18px;
+.stat-box{
+  background:rgba(0,0,0,0.4);
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  transition:0.3s;
 }
 
-/* VIDEO */
-video{
-    width:90%;
-    max-width:400px;
-    border-radius:10px;
-    margin-top:20px;
+.stat-box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 20px rgba(0,255,136,0.5);
 }
 
-/* ABOUT */
-.about{
-    max-width:600px;
-    margin:30px auto;
-    line-height:1.6;
+.stat-box h3{
+  font-size:42px;
+  color:#00ff88;
 }
 
-/* SOCIAL */
-.social a{
-    display:block;
-    color:#00aaff;
-    margin:5px;
-    text-decoration:none;
+.stat-box p{
+  margin-top:10px;
 }
 
-/* CONTACT */
-.contact{
-    margin-top:20px;
+/* PROFESSIONAL GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
 }
+
+.gallery-card{
+  background:rgba(255,255,255,0.05);
+  border-radius:25px;
+  overflow:hidden;
+  transition:0.4s;
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.gallery-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px rgba(0,255,136,0.5);
+}
+
+.gallery-card img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+}
+
+.gallery-info{
+  padding:20px;
+}
+
+.gallery-info h3{
+  color:#00ff88;
+  margin-bottom:10px;
+}
+
+.gallery-info p{
+  text-align:left;
+  font-size:15px;
+  color:#ccc;
+}
+
+/* SOCIALS */
+.socials{
+  text-align:center;
+}
+
+.socials a{
+  display:inline-block;
+  margin:12px;
+  padding:15px 30px;
+  background:#00ff88;
+  color:black;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  background:white;
+  transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background:rgba(0,0,0,0.7);
+  color:#aaa;
+  margin-top:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero-content h1{
+  font-size:55px;
+}
+
+.hero-content p{
+  font-size:18px;
+}
+
+nav{
+  flex-direction:column;
+}
+
+nav ul{
+  margin-top:10px;
+}
+
+nav ul li{
+  margin:0 10px;
+}
+
+section{
+  padding:25px;
+}
+
+.gallery-card img{
+  height:300px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
+<!-- NAVBAR -->
+<nav>
 
-<video autoplay muted loop id="bg-video">
-    <source src="bg.mp4" type="video/mp4">
-</video>
+<div class="logo">ISAAC JR</div>
 
-<div class="overlay">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-    <!-- PROFILE -->
-    <div class="profile">
-        <img src="profile.jpg" alt="Profile Picture">
-        <h1>Isaac Jr</h1>
-        <p class="role">Right Winger ⚽</p>
-        <p>Young footballer from Ghana 🇬🇭</p>
-        <p>Age: 13</p>
-        <p>A dream chaser with big goals</p>
-    </div>
+</nav>
 
-    <!-- STATS -->
-    <div class="stats">
-        <div>2<br>Goals</div>
-        <div>3<br>Assists</div>
-        <div>3<br>Matches</div>
-    </div>
+<!-- HERO -->
+<div class="hero">
 
-    <!-- HIGHLIGHT VIDEO -->
-    <h2>Highlights 🎬</h2>
-    <video controls>
-        <source src="highlight.mp4" type="video/mp4">
-    </video>
+<div class="hero-content">
 
-    <!-- ABOUT -->
-    <div class="about">
-        <h2>About Me</h2>
-        <p>
-        Hi, I'm Isaac, a 13-year-old aspiring footballer with a strong passion for the game.
-        I play as a right winger, using my speed and creativity to help my team attack.
-        My biggest inspiration is Lionel Messi, and I am a proud supporter of FC Barcelona.
-        I am also learning web development and building my own projects as I grow on and off the field.
-        </p>
-    </div>
+<h1>ISAAC JR</h1>
 
-    <!-- SOCIAL -->
-    <div class="social">
-        <h2>Social Media</h2>
-        <a href="#">Instagram: Isaac_Jnr30</a>
-        <a href="#">TikTok: Isaac_Jnr30</a>
-        <a href="#">YouTube: Isaac_Jnr30</a>
-    </div>
+<p>
+Young Football Talent • Right Winger • Future Star ⚽
+</p>
 
-    <!-- CONTACT -->
-    <div class="contact">
-        <h2>Contact</h2>
-        <p>Email: isaacike863@gmail.com</p>
-        <p>Phone: +233536731019</p>
-        <p>Business: isaacike863@gmail.com</p>
-    </div>
+<a href="#gallery">Explore Gallery</a>
 
 </div>
+
+</div>
+
+<!-- MAIN IMAGE -->
+<div class="main-photo">
+
+<img src="images/photo2.jpg">
+
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am Isaac Jr, a young football player from Ghana.
+I play as a right winger and my favorite football player is Messi.
+I dream of becoming a professional football player and playing for the biggest clubs in the world.
+I train hard every day to improve my dribbling, speed, passing and finishing.
+</p>
+
+</section>
+
+<!-- PLAYER PROFILE -->
+<section>
+
+<h2>Player Profile</h2>
+
+<div class="stats">
+
+<div class="stat-box">
+<h3>RW</h3>
+<p>Position</p>
+</div>
+
+<div class="stat-box">
+<h3>13</h3>
+<p>Age</p>
+</div>
+
+<div class="stat-box">
+<h3>🇬🇭</h3>
+<p>Nationality</p>
+</div>
+
+<div class="stat-box">
+<h3>10</h3>
+<p>Dream Number</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+
+<h2>Football Gallery</h2>
+
+<div class="gallery">
+
+<!-- PHOTO 1 -->
+<div class="gallery-card">
+
+<img src="images/photo1.jpg">
+
+<div class="gallery-info">
+
+<h3>Match Day</h3>
+
+<p>
+Focused and ready for the game with teammates before kickoff.
+</p>
+
+</div>
+
+</div>
+
+<!-- PHOTO 2 -->
+<div class="gallery-card">
+
+<img src="images/match.jpg">
+
+<div class="gallery-info">
+
+<h3>Football Training</h3>
+
+<p>
+Training hard and improving skills every day on the pitch.
+</p>
+
+</div>
+
+</div>
+
+<!-- PHOTO 3 -->
+<div class="gallery-card">
+
+<img src="images/training.jpg">
+
+<div class="gallery-info">
+
+<h3>Team Spirit</h3>
+
+<p>
+Building teamwork, confidence and football experience together.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOCIALS -->
+<section id="contact" class="socials">
+
+<h2>Follow Me</h2>
+
+<a href="https://instagram.com/Isaac_Jnr30" target="_blank">
+Instagram
+</a>
+
+<a href="https://tiktok.com/@Isaac_Jnr30" target="_blank">
+TikTok
+</a>
+
+<a href="https://youtube.com/@Isaac_Jnr30" target="_blank">
+YouTube
+</a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+© 2026 Isaac Jr Official Football Portfolio
+
+</footer>
 
 </body>
 </html>
