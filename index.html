@@ -3,20 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Isaac Jr | Football Player</title>
-
+<title>Isaac Jnr | Football Player</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 font-family:'Poppins',sans-serif;
 }
 
@@ -26,693 +22,359 @@ color:white;
 overflow-x:hidden;
 }
 
-body::before{
-content:'';
-position:fixed;
-width:100%;
-height:100%;
-background:radial-gradient(circle at top right, rgba(255,215,0,0.12), transparent 30%);
-z-index:-1;
+html{
+scroll-behavior:smooth;
 }
 
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
-z-index:1000;
-border-bottom:1px solid rgba(255,215,0,0.2);
-}
-
-.logo{
-font-size:30px;
-font-weight:700;
-color:gold;
-letter-spacing:2px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-weight:500;
-transition:0.4s;
-}
-
-nav a:hover{
-color:gold;
-}
-
-.hero{
-min-height:100vh;
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('images/profile.jpg');
+background-size:cover;
+background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:140px 8% 100px;
-background:
-linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-url('hero.jpg');
-background-size:cover;
-background-position:center;
+padding:20px;
 }
 
-.hero-content{
-max-width:750px;
-animation:fadeIn 1.5s ease;
+.hero h1{
+font-size:70px;
+font-weight:800;
+letter-spacing:2px;
 }
 
-.hero-content h1{
-font-size:90px;
-line-height:1;
-margin-bottom:20px;
+.hero p{
+font-size:22px;
+margin-top:10px;
+color:#ccc;
 }
 
-.hero-content span{
-color:gold;
-text-shadow:0 0 25px rgba(255,215,0,0.5);
-}
-
-.hero-content p{
-font-size:20px;
-line-height:1.8;
-color:#ddd;
-margin-bottom:35px;
-}
-
-.buttons{
+.hero-buttons{
+margin-top:30px;
 display:flex;
-justify-content:center;
 gap:20px;
+justify-content:center;
 flex-wrap:wrap;
 }
 
-.btn{
-padding:15px 35px;
-border-radius:50px;
+.hero-buttons a{
 text-decoration:none;
+padding:14px 30px;
+border-radius:50px;
 font-weight:600;
-transition:0.4s;
-border:2px solid gold;
+transition:.3s;
 }
 
-.gold-btn{
-background:gold;
+.btn1{
+background:#00ff88;
 color:black;
 }
 
-.gold-btn:hover{
-background:transparent;
-color:gold;
+.btn2{
+border:2px solid white;
+color:white;
+}
+
+.hero-buttons a:hover{
 transform:translateY(-5px);
 }
 
-.outline-btn{
-color:gold;
+section{
+padding:90px 10%;
 }
 
-.outline-btn:hover{
-background:gold;
+.title{
+font-size:40px;
+margin-bottom:40px;
+font-weight:700;
+text-align:center;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about-text p{
+line-height:1.8;
+color:#bbb;
+margin-bottom:20px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.stat-box{
+background:#111;
+padding:35px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+border:1px solid #222;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+background:#00ff88;
 color:black;
-transform:translateY(-5px);
+}
+
+.stat-box h2{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.video-section{
+text-align:center;
+}
+
+.video-box{
+margin-top:40px;
+background:#111;
+padding:30px;
+border-radius:20px;
+}
+
+iframe{
+width:100%;
+height:500px;
+border:none;
+border-radius:20px;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.info-card{
+background:#111;
+padding:30px;
+border-radius:20px;
+text-align:center;
+border:1px solid #222;
+}
+
+.info-card h3{
+margin-bottom:15px;
+font-size:25px;
+}
+
+.contact{
+text-align:center;
 }
 
 .socials{
 margin-top:30px;
 display:flex;
 justify-content:center;
-gap:15px;
+gap:20px;
 flex-wrap:wrap;
 }
 
 .socials a{
 text-decoration:none;
-padding:14px 22px;
-border-radius:50px;
-background:#111;
-border:1px solid rgba(255,215,0,0.3);
 color:white;
-transition:0.4s;
+background:#111;
+padding:15px 25px;
+border-radius:50px;
+transition:.3s;
 }
 
 .socials a:hover{
-background:gold;
+background:#00ff88;
 color:black;
-transform:translateY(-5px);
-}
-
-section{
-padding:110px 8%;
-}
-
-.title{
-text-align:center;
-margin-bottom:70px;
-}
-
-.title h2{
-font-size:50px;
-color:gold;
-}
-
-.about-content{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:60px;
-align-items:center;
-}
-
-.about-content img{
-width:100%;
-border-radius:25px;
-border:3px solid gold;
-transition:0.5s;
-}
-
-.about-content img:hover{
-transform:scale(1.04);
-}
-
-.about-text p{
-line-height:2;
-color:#d5d5d5;
-font-size:17px;
-}
-
-.stats-grid,
-.gallery-grid,
-.achievement-list{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.stat-card,
-.achievement-card,
-.contact-box{
-background:linear-gradient(145deg,#101010,#181818);
-padding:35px;
-border-radius:24px;
-border:1px solid rgba(255,215,0,0.15);
-transition:0.4s;
-}
-
-.stat-card:hover,
-.achievement-card:hover,
-.contact-box:hover{
-transform:translateY(-10px);
-box-shadow:0 0 30px rgba(255,215,0,0.2);
-}
-
-.stat-card h3,
-.achievement-card h3{
-font-size:24px;
-color:gold;
-margin-bottom:15px;
-}
-
-.stat-card span{
-font-size:60px;
-font-weight:700;
-}
-
-.gallery-grid img{
-width:100%;
-height:350px;
-object-fit:cover;
-border-radius:24px;
-transition:0.5s;
-border:2px solid transparent;
-}
-
-.gallery-grid img:hover{
-transform:scale(1.05);
-border-color:gold;
-box-shadow:0 0 25px rgba(255,215,0,0.3);
-}
-
-.video-section iframe{
-width:100%;
-height:550px;
-border:none;
-border-radius:25px;
-}
-
-.contact-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:40px;
-}
-.contact-box p{
-margin:18px 0;
-color:#ccc;
-}
-
-form input,
-form textarea{
-width:100%;
-padding:18px;
-margin-bottom:18px;
-background:#1c1c1c;
-border:none;
-border-radius:14px;
-color:white;
-}
-
-form button{
-width:100%;
-padding:18px;
-background:gold;
-border:none;
-border-radius:14px;
-font-weight:700;
-cursor:pointer;
-transition:0.4s;
-}
-
-form button:hover{
 transform:translateY(-5px);
 }
 
 footer{
 text-align:center;
-padding:40px;
-border-top:1px solid #222;
-color:#aaa;
-line-height:2;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+padding:30px;
+background:#111;
+color:#888;
 }
 
 @media(max-width:900px){
-
-nav{
-display:none;
+.about{
+grid-template-columns:1fr;
 }
 
-.hero-content h1{
-font-size:60px;
+.hero h1{
+font-size:45px;
 }
 
-.hero-content p{
-font-size:18px;
+iframe{
+height:250px;
 }
-
-.video-section iframe{
-height:300px;
 }
-
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
+<div class="hero">
+<h1>ISAAC JNR</h1>
+<p>Professional Football Player | Winger | Ghana 🇬🇭</p>
 
-<div class="logo">
-ISAAC JR
+<div class="hero-buttons">
+<a href="#contact" class="btn1">Contact Me</a>
+<a href="#highlights" class="btn2">Watch Highlights</a>
 </div>
-
-<nav>
-<a href="#about">About</a>
-<a href="#stats">Stats</a>
-<a href="#gallery">Gallery</a>
-<a href="#highlights">Highlights</a>
-<a href="#contact">Contact</a>
-</nav>
-
+</div>
 </header>
 
-<section class="hero">
+<section>
+<h2 class="title">About Me</h2>
 
-<div class="hero-content">
-
-<h1>
-ISAAC <span>JR</span>
-</h1>
-  <!-- PROFESSIONAL PLAYER STATS -->
-
-<div class="player-stats-bar">
-
-<div class="mini-stat">
-<div class="stat-glow"></div>
-<div class="stat-number">4</div>
-<div class="stat-name">MATCHES</div>
-</div>
-
-<div class="mini-stat">
-<div class="stat-glow"></div>
-<div class="stat-number">2</div>
-<div class="stat-name">GOALS</div>
-</div>
-
-<div class="mini-stat">
-<div class="stat-glow"></div>
-<div class="stat-number">3</div>
-<div class="stat-name">ASSISTS</div>
-</div>
-
-</div>
-
-<style>
-
-.player-stats-bar{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:30px;
-margin:50px 0;
-flex-wrap:wrap;
-animation:fadeIn 1.5s ease;
-}
-
-.mini-stat{
-position:relative;
-background:linear-gradient(145deg,#0d0d0d,#1a1a1a);
-padding:35px 45px;
-border-radius:28px;
-min-width:190px;
-text-align:center;
-overflow:hidden;
-border:1px solid rgba(255,215,0,0.12);
-transition:0.5s;
-backdrop-filter:blur(12px);
-box-shadow:
-0 10px 30px rgba(0,0,0,0.5),
-0 0 15px rgba(255,215,0,0.05);
-}
-
-.mini-stat:hover{
-transform:translateY(-12px) scale(1.04);
-border-color:rgba(255,215,0,0.6);
-box-shadow:
-0 15px 40px rgba(0,0,0,0.6),
-0 0 35px rgba(255,215,0,0.2);
-}
-
-.stat-glow{
-position:absolute;
-top:-80px;
-right:-80px;
-width:180px;
-height:180px;
-background:radial-gradient(circle, rgba(255,215,0,0.25), transparent 70%);
-pointer-events:none;
-}
-
-.mini-stat::before{
-content:'';
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:100%;
-background:linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,0.08),
-transparent
-);
-transition:0.8s;
-}
-
-.mini-stat:hover::before{
-left:100%;
-}
-
-.stat-number{
-font-size:64px;
-font-weight:700;
-line-height:1;
-margin-bottom:14px;
-color:gold;
-text-shadow:
-0 0 10px rgba(255,215,0,0.3),
-0 0 25px rgba(255,215,0,0.25);
-}
-
-.stat-name{
-font-size:15px;
-font-weight:600;
-letter-spacing:4px;
-color:#e0e0e0;
-}
-
-@media(max-width:768px){
-
-.player-stats-bar{
-gap:18px;
-}
-
-.mini-stat{
-min-width:150px;
-padding:28px 25px;
-}
-
-.stat-number{
-font-size:48px;
-}
-
-.stat-name{
-font-size:13px;
-letter-spacing:2px;
-}
-
-}
-
-</style>
-
-<p>
-Football Player • Winger • Ghana 🇬🇭
-<br><br>
-Dedicated to growth, discipline, and excellence on the pitch.
-</p>
-
-<div class="buttons">
-<a href="#gallery" class="btn gold-btn">View Gallery</a>
-<a href="#contact" class="btn outline-btn">Contact Me</a>
-</div>
-
-<div class="socials">
-
-<a href="https://instagram.com/Isaac_Jnr30" target="_blank">
-Instagram
-</a>
-
-<a href="https://tiktok.com/@Isaac_Jnr30" target="_blank">
-TikTok
-</a>
-
-<a href="https://youtube.com/@Isaac_Jnr30" target="_blank">
-YouTube
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="about">
-
-<div class="title">
-<h2>About Me</h2>
-</div>
-
-<div class="about-content">
-
-<img src="profile.jpg" alt="Football Player">
+<div class="about">
+<img src="images/profile.jpg" alt="Football Player">
 
 <div class="about-text">
-
 <p>
-I am a passionate football player focused on improving every day.
-I play with speed, confidence, creativity, and discipline.
-My goal is to continue developing my football career and compete at the highest level.
+Young talented football player from Ghana focused on improving every day and reaching the professional level. Strong pace, dribbling, attacking movement and creativity on the wing.
 </p>
 
-<br><br>
-
 <p>
-✔ Speed
-<br><br>
-✔ Dribbling
-<br><br>
-✔ Finishing
-<br><br>
-✔ Passing
-<br><br>
-✔ Vision
-<br><br>
-✔ Work Rate
+Available for trials, scouting opportunities, academy invitations and football showcases.
 </p>
 
+<div class="stats">
+<div class="stat-box">
+<h2>3</h2>
+<p>Matches</p>
 </div>
 
+<div class="stat-box">
+<h2>2</h2>
+  <div class="stat-box">
+<h2>3</h2>
+<p>Assists</p>
 </div>
-
-</section>
-
-<section id="stats">
-
-<div class="title">
-<h2>Player Stats</h2>
 </div>
-
-<div class="stats-grid">
-
-<div class="stat-card">
-<h3>Pace</h3>
-<span>50</span>
 </div>
-
-<div class="stat-card">
-<h3>Dribbling</h3>
-<span>50</span>
 </div>
-
-<div class="stat-card">
-<h3>Shooting</h3>
-<span>50</span>
-</div>
-
-<div class="stat-card">
-<h3>Passing</h3>
-<span>50</span>
-</div>
-
-<div class="stat-card">
-<h3>Physical</h3>
-<span>50</span>
-</div>
-
-<div class="stat-card">
-<h3>Defending</h3>
-<span>50</span>
-</div>
-
-</div>
-
-</section>
-
-<section id="gallery">
-
-<div class="title">
-<h2>Football Gallery</h2>
-</div>
-
-<div class="gallery-grid">
-
-<img src="match1.jpg">
-<img src="match2.jpg">
-<img src="training1.jpg">
-<img src="hero.jpg">
-
-</div>
-
-</section>
-
-
 </section>
 
 <section>
+<h2 class="title">Player Information</h2>
 
-<div class="title">
-<h2>Achievements</h2>
+<div class="info-grid">
+<div class="info-card">
+<h3>Position</h3>
+<p>LW / RW</p>
 </div>
 
-<div class="achievement-list">
-
-<div class="achievement-card">
-<h3>Best Young Player</h3>
-<p>Outstanding performances throughout the season.</p>
+<div class="info-card">
+<h3>Nationality</h3>
+<p>Ghana 🇬🇭</p>
 </div>
 
-<div class="achievement-card">
-<h3>Top Scorer</h3>
-<p>Finished tournament among top goal scorers.</p>
+<div class="info-card">
+<h3>Strong Foot</h3>
+<p>Right Foot</p>
 </div>
 
-<div class="achievement-card">
-<h3>Team Captain</h3>
-<p>Led the team with discipline and leadership.</p>
+<div class="info-card">
+<h3>Playing Style</h3>
+<p>Fast • Creative • Technical</p>
 </div>
-
 </div>
-
 </section>
 
-<section id="contact">
+<section>
+<h2 class="title">Football Gallery</h2>
 
-<div class="title">
-<h2>Contact Me</h2>
+<div class="gallery">
+<img src="images/photo1.jpg">
+<img src="images/photo2.jpg">
+<img src="images/photo3.jpg">
+<img src="images/photo4.jpg">
+</div>
+</section>
+
+<section id="highlights" class="video-section">
+<h2 class="title">Highlights Video</h2>
+
+<div class="video-box">
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
+</div>
+</section>
+
+<section>
+<h2 class="title">Achievements</h2>
+
+<div class="info-grid">
+<div class="info-card">
+<h3>Speed</h3>
+<p>Excellent acceleration and quick movement on the wing.</p>
 </div>
 
-<div class="contact-container">
+<div class="info-card">
+<h3>Dribbling</h3>
+<p>Strong 1v1 ability and ball control under pressure.</p>
+</div>
 
-<div class="contact-box">
+<div class="info-card">
+<h3>Vision</h3>
+<p>Creates chances and assists for teammates.</p>
+</div>
 
-<h3>Contact Info</h3>
+<div class="info-card">
+<h3>Work Rate</h3>
+<p>Dedicated to training and improving daily.</p>
+</div>
+</div>
+</section>
 
-<p>Email: isaacike863@gmail.com</p>
-
-<p>Phone: +233536731019</p>
-
-<p>Location: Ghana 🇬🇭</p>
+<section id="contact" class="contact">
+<h2 class="title">Contact & Socials</h2>
+<p>Available for scouting, football opportunities and collaborations.</p>
 
 <div class="socials">
-<a href="https://wa.me/233536731019" target="_blank">
-WhatsApp
-</a>
+<a href="https://instagram.com/YOURUSERNAME" target="_blank">Instagram</a>
+<a href="https://tiktok.com/@YOURUSERNAME" target="_blank">TikTok</a>
+<a href="https://youtube.com" target="_blank">YouTube</a>
+<a href="mailto:your@email.com">Email</a>
 </div>
-
-</div>
-
-<div class="contact-box">
-
-<form>
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-<textarea rows="6" placeholder="Your Message"></textarea>
-
-<button type="submit">
-Send Message
-</button>
-
-</form>
-
-</div>
-
-</div>
-
 </section>
 
 <footer>
-
-© 2026 Isaac Jr Football Portfolio.
-<br><br>
-Dream big. Train harder. Stay focused.
-
+<p>© 2026 Isaac Jnr | Football Portfolio Website</p>
 </footer>
 
 </body>
 </html>
+<p>Goals</p>
+</div>
