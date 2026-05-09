@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Isaac Jr | Professional Football Player</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Isaac Jr | Official Football Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,7 +15,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
-font-family:'Poppins',sans-serif;
+font-family:'Montserrat',sans-serif;
 }
 
 body{
@@ -25,73 +26,74 @@ overflow-x:hidden;
 
 /* ANIMATED BACKGROUND */
 
-.bg-animation{
+.background{
 position:fixed;
-width:100%;
-height:100%;
 top:0;
 left:0;
+width:100%;
+height:100%;
 z-index:-1;
 overflow:hidden;
+background:linear-gradient(to bottom,#020617,#071226,#0f172a);
 }
 
-.bg-animation span{
+.background span{
 position:absolute;
 display:block;
-width:25px;
-height:25px;
+width:20px;
+height:20px;
 background:rgba(56,189,248,0.15);
+border-radius:50%;
 animation:animate 20s linear infinite;
 bottom:-150px;
-border-radius:50%;
 }
 
-.bg-animation span:nth-child(1){
+.background span:nth-child(1){
 left:10%;
 width:80px;
 height:80px;
 animation-duration:18s;
 }
 
-.bg-animation span:nth-child(2){
+.background span:nth-child(2){
 left:20%;
-width:30px;
-height:30px;
+width:35px;
+height:35px;
 animation-duration:12s;
 }
 
-.bg-animation span:nth-child(3){
+.background span:nth-child(3){
 left:35%;
-width:50px;
-height:50px;
+width:60px;
+height:60px;
 animation-duration:25s;
 }
 
-.bg-animation span:nth-child(4){
+.background span:nth-child(4){
 left:50%;
 width:90px;
 height:90px;
 animation-duration:20s;
 }
 
-.bg-animation span:nth-child(5){
+.background span:nth-child(5){
 left:65%;
 width:40px;
 height:40px;
-animation-duration:15s;
+animation-duration:16s;
 }
 
-.bg-animation span:nth-child(6){
+.background span:nth-child(6){
 left:80%;
 width:70px;
 height:70px;
 animation-duration:22s;
 }
 
-.bg-animation span:nth-child(7){
+.background span:nth-child(7){
 left:90%;
-width:35px;
-height:35px;
+width:30px;
+height:30px;
 animation-duration:14s;
 }
 
@@ -120,46 +122,58 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
 position:relative;
+padding:20px;
 }
 
 .hero{
 animation:fadeIn 2s ease;
 }
 
+.hero img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #38bdf8;
+box-shadow:0 0 40px rgba(56,189,248,0.8);
+margin-bottom:30px;
+animation:float 4s ease-in-out infinite;
+}
+
 .hero h1{
 font-size:90px;
-font-weight:700;
-color:#38bdf8;
-text-shadow:0 0 30px #38bdf8;
+font-weight:900;
+letter-spacing:4px;
+color:white;
 margin-bottom:20px;
+text-transform:uppercase;
 }
 
 .hero p{
-font-size:28px;
-color:#e2e8f0;
-margin-bottom:35px;
+font-size:24px;
+color:#cbd5e1;
+margin-bottom:40px;
 }
 
-.hero .btn{
+.hero a{
 display:inline-block;
 padding:16px 40px;
 background:#38bdf8;
 color:black;
-font-weight:600;
-border-radius:50px;
+font-weight:700;
 text-decoration:none;
+border-radius:50px;
 transition:0.4s;
 box-shadow:0 0 20px rgba(56,189,248,0.5);
 }
 
-.hero .btn:hover{
-transform:translateY(-5px) scale(1.05);
+.hero a:hover{
 background:white;
+transform:translateY(-5px) scale(1.05);
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 padding:100px 10%;
@@ -168,20 +182,21 @@ padding:100px 10%;
 .title{
 text-align:center;
 font-size:50px;
-margin-bottom:50px;
-color:#38bdf8;
+font-weight:800;
+margin-bottom:60px;
+color:white;
 position:relative;
 }
 
 .title::after{
 content:'';
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+bottom:-15px;
 width:120px;
 height:4px;
 background:#38bdf8;
-position:absolute;
-bottom:-10px;
-left:50%;
-transform:translateX(-50%);
 border-radius:20px;
 }
 
@@ -200,7 +215,7 @@ color:#cbd5e1;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
-margin-top:60px;
+margin-top:70px;
 }
 
 .card{
@@ -210,7 +225,7 @@ padding:45px;
 border-radius:25px;
 text-align:center;
 transition:0.5s;
-border:1px solid rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .card:hover{
@@ -220,15 +235,16 @@ color:black;
 }
 
 .card h2{
-font-size:60px;
+font-size:65px;
 margin-bottom:15px;
+font-weight:900;
 }
 
 /* GALLERY */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 margin-top:50px;
 }
@@ -237,12 +253,12 @@ margin-top:50px;
 position:relative;
 overflow:hidden;
 border-radius:25px;
-box-shadow:0 0 25px rgba(0,0,0,0.5);
+box-shadow:0 0 30px rgba(0,0,0,0.5);
 }
 
 .gallery-item img{
 width:100%;
-height:400px;
+height:450px;
 object-fit:cover;
 transition:0.6s;
 }
@@ -256,18 +272,18 @@ position:absolute;
 bottom:0;
 left:0;
 width:100%;
-padding:25px;
-background:linear-gradient(transparent,rgba(0,0,0,0.9));
-}
-
-.overlay h3{
-font-size:28px;
+padding:30px;
+background:linear-gradient(transparent,rgba(0,0,0,0.95));
+}.overlay h3{
+font-size:30px;
 margin-bottom:10px;
+font-weight:700;
 }
 
 .overlay p{
 font-size:16px;
 color:#e2e8f0;
+line-height:1.7;
 }
 
 /* SKILLS */
@@ -277,24 +293,37 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 margin-top:50px;
-}.skill-box{
+}
+
+.skill{
 background:rgba(255,255,255,0.05);
 padding:40px;
 border-radius:25px;
 text-align:center;
 transition:0.5s;
-border:1px solid rgba(255,255,255,0.1);
 }
 
-.skill-box:hover{
+.skill:hover{
 background:#38bdf8;
 color:black;
 transform:scale(1.05);
 }
 
-.skill-box h2{
-margin-bottom:15px;
+.skill h2{
 font-size:32px;
+margin-bottom:15px;
+}
+
+/* QUOTE */
+
+.quote{
+text-align:center;
+font-size:32px;
+font-weight:700;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+color:white;
 }
 
 /* CONTACT */
@@ -309,9 +338,9 @@ margin:15px;
 padding:15px 35px;
 background:#38bdf8;
 color:black;
-font-weight:600;
-border-radius:50px;
+font-weight:700;
 text-decoration:none;
+border-radius:50px;
 transition:0.4s;
 }
 
@@ -344,18 +373,41 @@ transform:translateY(0);
 }
 }
 
+@keyframes float{
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+}
+
 @media(max-width:768px){
 
 .hero h1{
-font-size:55px;
+font-size:50px;
 }
 
 .hero p{
-font-size:20px;
+font-size:18px;
+}
+
+.hero img{
+width:160px;
+height:160px;
 }
 
 .title{
 font-size:38px;
+}
+
+.quote{
+font-size:24px;
 }
 
 }
@@ -365,9 +417,9 @@ font-size:38px;
 
 <body>
 
-<!-- ANIMATED BACKGROUND -->
+<!-- BACKGROUND -->
 
-<div class="bg-animation">
+<div class="background">
 <span></span>
 <span></span>
 <span></span>
@@ -383,11 +435,13 @@ font-size:38px;
 
 <div class="hero">
 
+<img src="profile.jpg" alt="Isaac Jnr">
+
 <h1>ISAAC JR</h1>
 
 <p>Professional Football Player • Rising Talent • Future Star</p>
 
-<a href="#about" class="btn">Explore Profile</a>
+<a href="#about">Explore Profile</a>
 
 </div>
 
@@ -401,10 +455,9 @@ font-size:38px;
 
 <p class="about">
 
-I am a passionate and hardworking football player focused on improving every day and reaching the professional level. 
-My game is built on speed, confidence, creativity, discipline, and consistency.
+I am a passionate and hardworking football player focused on improving every day and reaching the professional level. My game is built on confidence, speed, discipline, creativity, and consistency.
 
-I enjoy attacking football, creating opportunities, helping teammates, and making an impact during matches. Every training session helps me improve my movement, technical ability, football intelligence, and finishing.
+I enjoy attacking football, creating opportunities, helping teammates, and making an impact during matches. Every training session helps me improve my technical ability, movement, football intelligence, and finishing.
 
 </p>
 
@@ -443,7 +496,7 @@ I enjoy attacking football, creating opportunities, helping teammates, and makin
 
 <div class="overlay">
 <h3>Training Session</h3>
-<p>Hard work and dedication every day to improve my football ability.</p>
+<p>Dedication, discipline, and hard work every day to improve my football ability.</p>
 </div>
 
 </div>
@@ -474,7 +527,7 @@ I enjoy attacking football, creating opportunities, helping teammates, and makin
 
 </section>
 
-<!-- SKILLS -->
+<!-- PLAYING STYLE -->
 
 <section>
 
@@ -482,41 +535,39 @@ I enjoy attacking football, creating opportunities, helping teammates, and makin
 
 <div class="skills">
 
-<div class="skill-box">
+<div class="skill">
 <h2>⚡ Speed</h2>
-<p>Quick acceleration and fast attacking movement.</p>
+<p>Quick acceleration and attacking movement.</p>
 </div>
 
-<div class="skill-box">
+<div class="skill">
 <h2>🎯 Finishing</h2>
 <p>Ability to score goals and create chances.</p>
 </div>
 
-<div class="skill-box">
+<div class="skill">
 <h2>🔥 Dribbling</h2>
 <p>Confident on the ball with creativity and flair.</p>
 </div>
 
-<div class="skill-box">
+<div class="skill">
 <h2>🤝 Teamwork</h2>
-<p>Communication, support, and positive mentality.</p>
+<p>Communication and positive mentality.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- MENTALITY -->
+<!-- QUOTE -->
 
 <section>
 
-<h1 class="title">My Mentality</h1>
+<h1 class="title">Mentality</h1>
 
-<p class="about">
+<p class="quote">
 
 “Hard work, discipline, consistency, and belief are the keys to success.”
-
-Every picture, every training session, and every match is part of my journey to becoming a professional football player.
 
 </p>
 
@@ -528,9 +579,7 @@ Every picture, every training session, and every match is part of my journey to 
 
 <h1 class="title">Connect With Me</h1>
 
-<div class="socials">
-
-<a href="https://instagram.com/isaac_jnr30" target="_blank">Instagram</a>
+<div class="socials"><a href="https://instagram.com/isac_jnr30" target="_blank">Instagram</a>
 
 <a href="https://tiktok.com/@isaac_jnr30" target="_blank">TikTok</a>
 
@@ -544,7 +593,7 @@ Every picture, every training session, and every match is part of my journey to 
 
 <footer>
 
-<p>© 2026 Isaac Jr Football Profile • All Rights Reserved</p>
+<p>© 2026 Isaac Jr Official Football Profile • All Rights Reserved</p>
 
 </footer>
 
