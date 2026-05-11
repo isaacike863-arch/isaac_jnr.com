@@ -441,7 +441,7 @@ View Gallery
 <div class="stats-container">
 
 <div class="stat-box">
-<h3>19</h3>
+<h3>20</h3>
 <p>Matches</p>
 </div>
 
@@ -451,13 +451,13 @@ View Gallery
 </div>
 
 <div class="stat-box">
-<h3>6</h3>
+<h3>7</h3>
 <p>Assists</p>
 </div>
 
 <div class="stat-box">
-<h3>100%</h3>
-<p>Dedication</p>
+<h3 id="dedication-score">0%</h3>
+<p>Performance</p>
 </div>
 
 </div>
@@ -569,6 +569,20 @@ current = 0;
 showSlide(current);
 
 },4000);
+  /* PERFORMANCE */
+
+const matches = 3;
+const goals = 2;
+const assists = 3;
+
+let performance = ((goals * 20) + (assists * 15)) / matches;
+
+if(performance > 100){
+performance = 100;
+}
+
+document.getElementById("dedication-score").innerHTML =
+Math.round(performance) + "%";
 
 </script>
 
