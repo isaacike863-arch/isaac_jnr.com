@@ -10,6 +10,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
 <style>
+  /* COLORFUL BOLD TEXT */
+
+b,
+strong,
+h1,
+h2,
+h3,
+.section-title,
+.logo{
+
+background:linear-gradient(
+90deg,
+#3b82f6,
+#8b5cf6,
+#06b6d4,
+#ffffff
+);
+
+background-size:300% 300%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:gradientMove 6s linear infinite;
+
+}
+
+/* ANIMATION */
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:100% 50%;
+}
+
+}
+  </style>
 
 *{
 margin:0;
@@ -591,6 +632,7 @@ showSlide(current);
 /* PLAYER WEBSITE ACTIVE */
 
 </script>
+  
 
 </body>
 </html>
