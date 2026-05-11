@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -12,10 +11,6 @@
 
 <style>
 
-/* ========================= */
-/* GLOBAL */
-/* ========================= */
-
 *{
 margin:0;
 padding:0;
@@ -25,30 +20,29 @@ font-family:'Montserrat',sans-serif;
 }
 
 body{
-background:#050816;
+background:#020617;
 color:white;
 overflow-x:hidden;
-background-image:
-radial-gradient(circle at top left,#00f7ff22,transparent 30%),
-radial-gradient(circle at bottom right,#00ff9522,transparent 30%);
+background:
+radial-gradient(circle at top left,#2563eb22,transparent 25%),
+radial-gradient(circle at bottom right,#9333ea22,transparent 25%),
+#020617;
 }
 
-/* ========================= */
 /* NAVBAR */
-/* ========================= */
 
 nav{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:20px 8%;
+padding:22px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 background:rgba(0,0,0,0.45);
-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,0.08);
 z-index:1000;
 }
 
@@ -56,16 +50,15 @@ z-index:1000;
 font-size:34px;
 font-weight:900;
 letter-spacing:2px;
-background:linear-gradient(90deg,#00f7ff,#00ff95,#ffffff);
+background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ffffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-animation:glow 3s infinite linear;
 }
 
 nav ul{
 display:flex;
 list-style:none;
-gap:30px;
+gap:35px;
 }
 
 nav ul li a{
@@ -82,7 +75,7 @@ left:0;
 bottom:-6px;
 width:0%;
 height:2px;
-background:#00f7ff;
+background:#3b82f6;
 transition:0.4s;
 }
 
@@ -90,9 +83,7 @@ nav ul li a:hover::after{
 width:100%;
 }
 
-/* ========================= */
 /* HERO */
-/* ========================= */
 
 .hero{
 height:100vh;
@@ -102,11 +93,10 @@ align-items:center;
 text-align:center;
 position:relative;
 overflow:hidden;
+padding:0 20px;
 }
 
-/* ========================= */
-/* 4K SLIDESHOW */
-/* ========================= */
+/* SLIDESHOW */
 
 .slider{
 position:absolute;
@@ -121,36 +111,21 @@ background:black;
 
 .slide{
 position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
-object-fit:cover;
-object-position:center center;
+object-fit:contain;
+object-position:center;
 opacity:0;
 transition:2s ease;
-filter:brightness(0.7);
-transform:scale(1.1);
-}
-
-.sslide{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100;
-  height:100;
-  object-fit:contain;
-  object-position:center;
-  opacity:0;
-  transition:3s ease;
 }
 
 .slide.active{
 opacity:1;
-transform:scale(1);
 }
 
-/* ========================= */
 /* OVERLAY */
-/* ========================= */
 
 .overlay{
 position:absolute;
@@ -158,98 +133,87 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:
-linear-gradient(to top,
-rgba(0,0,0,0.92),
-rgba(0,0,0,0.2));
+background:linear-gradient(to top,rgba(0,0,0,0.92),rgba(0,0,0,0.3));
 z-index:-1;
 }
 
-/* ========================= */
 /* HERO CONTENT */
-/* ========================= */
 
 .hero-content{
+max-width:1000px;
 animation:fadeUp 1.5s ease;
-padding:20px;
 }
 
 .hero-content h1{
-font-size:110px;
+font-size:95px;
 font-weight:900;
 line-height:1;
-margin-bottom:20px;
+margin-bottom:25px;
 text-transform:uppercase;
-background:linear-gradient(90deg,#00f7ff,#00ff95,#ffffff);
+background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ffffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-text-shadow:0 0 30px rgba(0,255,255,0.4);
+text-shadow:0 0 35px rgba(59,130,246,0.35);
 }
 
 .hero-content h2{
-font-size:35px;
-margin-bottom:20px;
-font-weight:500;
+font-size:42px;
+margin-bottom:25px;
+font-weight:700;
 }
 
 .hero-content p{
 max-width:850px;
 margin:auto;
-font-size:19px;
+font-size:21px;
 line-height:2;
-color:#d8d8d8;
+color:#e5e7eb;
 }
 
-/* ========================= */
 /* BUTTONS */
-/* ========================= */
 
 .hero-buttons{
-margin-top:40px;
+margin-top:45px;
 display:flex;
 justify-content:center;
-gap:20px;
+gap:25px;
 flex-wrap:wrap;
 }
 
 .btn{
-padding:16px 38px;
+padding:18px 42px;
 border-radius:50px;
 text-decoration:none;
 font-weight:800;
 transition:0.4s;
 letter-spacing:1px;
+font-size:16px;
 }
 
 .btn-primary{
-background:linear-gradient(90deg,#00f7ff,#00ff95);
-color:black;
-box-shadow:0 0 20px rgba(0,255,200,0.3);
+background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+color:white;
+box-shadow:0 0 25px rgba(59,130,246,0.4);
 }
 
 .btn-primary:hover{
 transform:translateY(-6px) scale(1.05);
-box-shadow:0 0 35px #00ffbf;
 }
 
 .btn-secondary{
-border:2px solid #00f7ff;
+border:2px solid #3b82f6;
 color:white;
 }
 
 .btn-secondary:hover{
-background:#00f7ff;
-color:black;
+background:#3b82f6;
 transform:translateY(-6px);
 }
 
-/* ========================= */
-/* STATS */
-/* ========================= */
+/* SECTION */
 
-.stats{
+section{
 padding:120px 8%;
-background:#08101f;
 }
 
 .section-title{
@@ -257,10 +221,18 @@ text-align:center;
 font-size:60px;
 font-weight:900;
 margin-bottom:70px;
-background:linear-gradient(90deg,#00f7ff,#00ff95,#ffffff);
+background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ffffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-}.stats-container{
+}
+
+/* STATS */
+
+.stats{
+background:#0f172a;
+}
+
+.stats-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:30px;
@@ -268,63 +240,48 @@ gap:30px;
 
 .stat-box{
 background:rgba(255,255,255,0.04);
-padding:45px;
+padding:50px;
 border-radius:30px;
 text-align:center;
 backdrop-filter:blur(10px);
 border:1px solid rgba(255,255,255,0.08);
 transition:0.5s;
-position:relative;
-overflow:hidden;
 }
 
 .stat-box:hover{
-transform:translateY(-12px);
-box-shadow:0 0 35px rgba(0,255,255,0.2);
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(59,130,246,0.3);
 }
 
 .stat-box h3{
-font-size:65px;
-color:#00f7ff;
-margin-bottom:10px;
+font-size:70px;
+color:#3b82f6;
+margin-bottom:15px;
 }
 
-/* ========================= */
 /* ABOUT */
-/* ========================= */
 
 .about{
-padding:120px 8%;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:60px;
 align-items:center;
-}
-
-.about img{
+}.about img{
 width:100%;
 border-radius:35px;
-box-shadow:0 0 40px rgba(0,255,200,0.25);
-transition:0.5s;
-}
-
-.about img:hover{
-transform:scale(1.03);
+box-shadow:0 0 45px rgba(59,130,246,0.25);
 }
 
 .about-text p{
-font-size:19px;
+font-size:20px;
 line-height:2;
-color:#d6d6d6;
+color:#d1d5db;
 }
 
-/* ========================= */
 /* GALLERY */
-/* ========================= */
 
 .gallery{
-padding:120px 8%;
-background:#08101f;
+background:#0f172a;
 }
 
 .gallery-container{
@@ -339,28 +296,22 @@ height:380px;
 object-fit:cover;
 border-radius:25px;
 transition:0.5s;
-filter:brightness(0.9);
 }
 
 .gallery-container img:hover{
 transform:scale(1.05);
-box-shadow:0 0 35px rgba(0,255,255,0.3);
-filter:brightness(1);
 }
 
-/* ========================= */
 /* CONTACT */
-/* ========================= */
 
 .contact{
-padding:120px 8%;
 text-align:center;
 }
 
 .contact p{
-font-size:19px;
-margin-bottom:40px;
-color:#d7d7d7;
+font-size:20px;
+margin-bottom:45px;
+color:#d1d5db;
 }
 
 .contact-links{
@@ -371,78 +322,55 @@ flex-wrap:wrap;
 }
 
 .contact-links a{
-padding:18px 35px;
+padding:18px 38px;
 border-radius:50px;
 text-decoration:none;
 font-weight:800;
 transition:0.5s;
-background:rgba(255,255,255,0.05);
+background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
 color:white;
-backdrop-filter:blur(10px);
 }
 
 .contact-links a:hover{
-background:linear-gradient(90deg,#00f7ff,#00ff95);
-color:black;
+background:linear-gradient(90deg,#3b82f6,#8b5cf6);
 transform:translateY(-6px);
-box-shadow:0 0 25px rgba(0,255,255,0.3);
 }
 
-/* ========================= */
 /* FOOTER */
-/* ========================= */
 
 footer{
 padding:35px;
 text-align:center;
-background:#02040d;
+background:#020617;
 font-size:15px;
-color:#8d8d8d;
+color:#9ca3af;
 }
 
-/* ========================= */
-/* ANIMATIONS */
-/* ========================= */
-
 @keyframes fadeUp{
-
 from{
 opacity:0;
-transform:translateY(50px);
+transform:translateY(60px);
 }
 
 to{
 opacity:1;
 transform:translateY(0);
 }
-
 }
-
-@keyframes glow{
-
-0%{
-filter:hue-rotate(0deg);
-}
-
-100%{
-filter:hue-rotate(360deg);
-}
-
-}
-
-/* ========================= */
-/* MOBILE */
-/* ========================= */
 
 @media(max-width:900px){
 
 .hero-content h1{
-font-size:55px;
+font-size:60px;
 }
 
 .hero-content h2{
-font-size:24px;
+font-size:28px;
+}
+
+.hero-content p{
+font-size:18px;
 }
 
 .about{
@@ -454,7 +382,7 @@ display:none;
 }
 
 .section-title{
-font-size:40px;
+font-size:42px;
 }
 
 }
@@ -465,12 +393,7 @@ font-size:40px;
 
 <body>
 
-<!-- ========================= -->
-<!-- NAVBAR -->
-<!-- ========================= -->
-
 <nav>
-
 <div class="logo">ISAAC JR</div>
 
 <ul>
@@ -479,16 +402,9 @@ font-size:40px;
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
-<!-- ========================= -->
-<!-- HERO -->
-<!-- ========================= -->
-
 <section class="hero">
-
-<!-- SLIDESHOW -->
 
 <div class="slider">
 
@@ -507,8 +423,6 @@ font-size:40px;
 
 <div class="overlay"></div>
 
-<!-- HERO CONTENT -->
-
 <div class="hero-content">
 
 <h1>ISAAC JR</h1>
@@ -525,7 +439,9 @@ Open for football trials, scouts and opportunities worldwide.
 
 <a href="#contact" class="btn btn-primary">
 Contact Me
-</a><a href="#gallery" class="btn btn-secondary">
+</a>
+
+<a href="#gallery" class="btn btn-secondary">
 View Gallery
 </a>
 
@@ -534,10 +450,6 @@ View Gallery
 </div>
 
 </section>
-
-<!-- ========================= -->
-<!-- STATS -->
-<!-- ========================= -->
 
 <section class="stats" id="stats">
 
@@ -560,15 +472,19 @@ View Gallery
 <p>Assists</p>
 </div>
 
+<div class="stat-box">
+<h3>14</h3>
+<p>Age</p>
+</div>
 
+<div class="stat-box">
+<h3>RW</h3>
+<p>Position</p>
+</div>
 
 </div>
 
 </section>
-
-<!-- ========================= -->
-<!-- ABOUT -->
-<!-- ========================= -->
 
 <section class="about" id="about">
 
@@ -579,14 +495,14 @@ View Gallery
 <h2 class="section-title">About Me</h2>
 
 <p>
-I am Isaac Jr, a dedicated football player with dreams of playing professional football at the highest level.
+I am Isaac Junior, a dedicated football player with dreams of playing professional football at the highest level.
 I work hard every day to improve my speed, skills, creativity and performance on the field.
 </p>
 
 <br>
 
 <p>
-Position: Forward / Winger <br><br>
+Position: Right Winger ⚽ <br><br>
 Nationality: Ghana 🇬🇭 <br><br>
 Strong Foot: Left <br><br>
 Playing Style: Fast • Technical • Creative
@@ -595,10 +511,6 @@ Playing Style: Fast • Technical • Creative
 </div>
 
 </section>
-
-<!-- ========================= -->
-<!-- GALLERY -->
-<!-- ========================= -->
 
 <section class="gallery" id="gallery">
 
@@ -615,10 +527,6 @@ Playing Style: Fast • Technical • Creative
 
 </section>
 
-<!-- ========================= -->
-<!-- CONTACT -->
-<!-- ========================= -->
-
 <section class="contact" id="contact">
 
 <h2 class="section-title">Contact Me</h2>
@@ -630,18 +538,10 @@ Feel free to contact me.
 
 <div class="contact-links">
 
-<div class="contact-links">
-
 <a href="mailto:isaacike863@gmail.com">
-📧 Email Me
-</a>
-
-<a href="https://instagram.com/isaac_jnr30" target="_blank">
+📧 Email
+</a><a href="https://instagram.com/isaac_jnr30" target="_blank">
 📸 Instagram
-</a>
-
-<a href="https://facebook.com/Isaac Jnr" target="_blank">
-📘 Facebook
 </a>
 
 <a href="https://tiktok.com/@isaac_jnr30" target="_blank">
@@ -653,9 +553,6 @@ Feel free to contact me.
 </a>
 
 </div>
-</a>
-
-</div>
 
 </section>
 
@@ -664,10 +561,6 @@ Feel free to contact me.
 </footer>
 
 <script>
-
-/* ========================= */
-/* SLIDESHOW */
-/* ========================= */
 
 const slides = document.querySelectorAll('.slide');
 
@@ -695,22 +588,7 @@ showSlide(current);
 
 },4000);
 
-/* ========================= */
-/* PERFORMANCE */
-/* ========================= */
-
-const matches = 20;
-const goals = 12;
-const assists = 10;
-
-let performance = ((goals * 20) + (assists * 15)) / matches;
-
-if(performance > 100){
-performance = 100;
-}
-
-document.getElementById("dedication-score").innerHTML =
-Math.round(performance) + "%";
+/* PLAYER WEBSITE ACTIVE */
 
 </script>
 
