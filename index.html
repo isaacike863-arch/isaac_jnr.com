@@ -10,47 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
 <style>
-  /* COLORFUL BOLD TEXT */
-
-b,
-strong,
-h1,
-h2,
-h3,
-.section-title,
-.logo{
-
-background:linear-gradient(
-90deg,
-#3b82f6,
-#8b5cf6,
-#06b6d4,
-#ffffff
-);
-
-background-size:300% 300%;
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-animation:gradientMove 6s linear infinite;
-
-}
-
-/* ANIMATION */
-
-@keyframes gradientMove{
-
-0%{
-background-position:0% 50%;
-}
-
-100%{
-background-position:100% 50%;
-}
-
-}
-  </style>
 
 *{
 margin:0;
@@ -400,6 +359,52 @@ transform:translateY(0);
 }
 }
 
+/* COLORFUL TEXT EFFECT */
+
+b,
+strong,
+h1,
+h2,
+h3,
+.section-title,
+.logo,
+.stat-box p,
+.hero-content h2{
+
+background:linear-gradient(
+90deg,
+#3b82f6,
+#8b5cf6,
+#06b6d4,
+#ffffff,
+#3b82f6
+);
+
+background-size:300% 300%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:gradientMove 6s linear infinite;
+
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
 @media(max-width:900px){
 
 .hero-content h1{
@@ -468,7 +473,7 @@ font-size:42px;
 
 <h1>ISAAC JR</h1>
 
-<h2>Official Football Profile ⚽</h2>
+<h2>Official Isaac Jr Profile ⚽</h2>
 
 <p>
 Young talented football player from Ghana focused on becoming a professional footballer.
@@ -536,7 +541,7 @@ View Gallery
 <h2 class="section-title">About Me</h2>
 
 <p>
-I am Isaac Junior, a dedicated football player with dreams of playing professional football at the highest level.
+I am Isaac Jr, a dedicated football player with dreams of playing professional football at the highest level.
 I work hard every day to improve my speed, skills, creativity and performance on the field.
 </p>
 
@@ -554,8 +559,7 @@ Playing Style: Fast • Technical • Creative
 </section>
 
 <section class="gallery" id="gallery">
-
-<h2 class="section-title">Football Gallery</h2>
+  <h2 class="section-title">Football Gallery</h2>
 
 <div class="gallery-container">
 
@@ -581,7 +585,9 @@ Feel free to contact me.
 
 <a href="mailto:isaacike863@gmail.com">
 📧 Email
-</a><a href="https://instagram.com/isaac_jnr30" target="_blank">
+</a>
+
+<a href="https://instagram.com/isaac_jnr30" target="_blank">
 📸 Instagram
 </a>
 
@@ -598,7 +604,7 @@ Feel free to contact me.
 </section>
 
 <footer>
-© 2026 Isaac Jr | Official Football Profile
+© 2026 Isaac Jr | Official Isaac Jr Profile
 </footer>
 
 <script>
@@ -632,7 +638,6 @@ showSlide(current);
 /* PLAYER WEBSITE ACTIVE */
 
 </script>
-  
 
 </body>
 </html>
