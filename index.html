@@ -20,7 +20,7 @@ font-family:'Montserrat',sans-serif;
 }
 
 body{
-background:#020617;
+background:#050505;
 color:white;
 overflow-x:hidden;
 background:
@@ -50,7 +50,7 @@ z-index:1000;
 font-size:34px;
 font-weight:900;
 letter-spacing:2px;
-background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ffffff);
+background:linear-gradient(90deg,#f59e0b,#ef4444,#ffffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -133,8 +133,9 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:linear-gradient(to top,rgba(0,0,0,0.92),rgba(0,0,0,0.3));
+background:linear-gradient(to top,rgba(0,0,0,0.95),rgba(0,0,0,0.45));
 z-index:-1;
+}
 }
 
 /* HERO CONTENT */
@@ -152,18 +153,23 @@ margin-bottom:20px;
 text-transform:uppercase;
 letter-spacing:3px;
 font-family:'Montserrat',sans-serif;
-
-background:linear-gradient(
-90deg,
-#06b6d4,
-#3b82f6,
-#ffffff
-);
-
+background:linear-gradient(90deg,#06b6d4,#3b82f6,#ffffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-
 text-shadow:0 0 35px rgba(59,130,246,0.35);
+}
+}
+
+.hero-content h2{
+font-size:52px;
+font-family:'Caveat',cursive;
+letter-spacing:2px;
+margin-bottom:25px;
+font-weight:700;
+color:white;
+text-shadow:0 0 20px rgba(255,255,255,0.2);
+}
+}
 }
 
 .hero-content p{
@@ -195,9 +201,10 @@ font-size:16px;
 }
 
 .btn-primary{
-background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+background:linear-gradient(90deg,#f59e0b,#ef4444);
 color:white;
-box-shadow:0 0 25px rgba(59,130,246,0.4);
+box-shadow:0 0 25px rgba(239,68,68,0.45);
+}
 }
 
 .btn-primary:hover{
@@ -205,8 +212,9 @@ transform:translateY(-6px) scale(1.05);
 }
 
 .btn-secondary{
-border:2px solid #3b82f6;
+border:2px solid #f59e0b;
 color:white;
+}
 }
 
 .btn-secondary:hover{
@@ -225,7 +233,7 @@ text-align:center;
 font-size:60px;
 font-weight:900;
 margin-bottom:70px;
-background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ffffff);
+background:linear-gradient(90deg,#f59e0b,#ef4444,#ffffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -255,15 +263,15 @@ transition:0.5s;
 .stat-box:hover{
 transform:translateY(-10px);
 box-shadow:0 0 40px rgba(59,130,246,0.3);
-}
-
-.stat-box h3{
+}.stat-box h3{
 font-size:70px;
 color:#3b82f6;
 margin-bottom:15px;
 }
 
-/* ABOUT */.about{
+/* ABOUT */
+
+.about{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:60px;
@@ -345,6 +353,31 @@ transform:scale(1.05);
 
 /* CONTACT */
 
+/* DREAM SECTION */
+
+.dream-section{
+background:#0f172a;
+}
+
+.dream-box{
+max-width:1000px;
+margin:auto;
+background:rgba(255,255,255,0.05);
+padding:50px;
+border-radius:30px;
+text-align:center;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.dream-box p{
+font-size:22px;
+line-height:2;
+color:#d1d5db;
+font-family:'Caveat',cursive;
+letter-spacing:1px;
+}
+
 .contact{
 text-align:center;
 }
@@ -383,9 +416,19 @@ transform:translateY(-6px);
 footer{
 padding:35px;
 text-align:center;
-background:#020617;
+background:#050505;
 font-size:15px;
 color:#9ca3af;
+}
+
+@keyframes zoomText{
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.05);
+}
 }
 
 @keyframes fadeUp{
@@ -453,13 +496,7 @@ font-size:60px;
 }
 
 .hero-content h2{
-font-size:52px;
-font-family:'Caveat',cursive;
-letter-spacing:2px;
-margin-bottom:25px;
-font-weight:700;
-color:white;
-text-shadow:0 0 20px rgba(255,255,255,0.2);
+font-size:28px;
 }
 
 .hero-content p{
@@ -520,9 +557,7 @@ font-size:42px;
 
 <h1>ISAAC JR</h1>
 
-<h2>Official Isaac Jr Profile ⚽</h2>
-
-<p>
+<h2>Official Isaac Jr Profile ⚽</h2><p>
 Young talented football player from Ghana focused on becoming a professional footballer.
 Fast, creative, hardworking and passionate about the game.
 Open for football trials, scouts and opportunities worldwide.
@@ -563,7 +598,9 @@ View Gallery
 <div class="stat-box">
 <h3>10</h3>
 <p>Assists</p>
-</div><div class="stat-box">
+</div>
+
+<div class="stat-box">
 <h3>14</h3>
 <p>Age</p>
 </div>
@@ -635,6 +672,52 @@ I work hard every day to improve my speed, skills, creativity and performance on
 
 </section>
 
+<section class="achievements">
+
+<h2 class="section-title">Player Highlights</h2>
+
+<div class="stats-container">
+
+<div class="stat-box">
+<h3>⚡</h3>
+<p>Explosive Pace</p>
+</div>
+
+<div class="stat-box">
+<h3>🎯</h3>
+<p>Creative Passing</p>
+</div>
+
+<div class="stat-box">
+<h3>🔥</h3>
+<p>1v1 Dribbling</p>
+</div>
+
+<div class="stat-box">
+<h3>💪</h3>
+<p>Strong Mentality</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="dream-section">
+
+<h2 class="section-title">Dream & Vision</h2>
+
+<div class="dream-box">
+
+<p>
+My dream is to become one of the best football players in the world.
+I train hard every day to improve my speed, technique, dribbling, creativity and finishing.
+I am looking for football opportunities, academy trials, scouts and professional development.
+</p>
+
+</div>
+
+</section>
+
 <section class="contact" id="contact">
 
 <h2 class="section-title">Contact Me</h2>
@@ -667,7 +750,7 @@ Feel free to contact me.
 </section>
 
 <footer>
-© 2026 Isaac Junior | Official Isaac Jr Profile
+© 2026 Isaac Jr | Official Isaac Jr Profile
 </footer>
 
 <script>
