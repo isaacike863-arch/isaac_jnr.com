@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Isaac Jr | Official IsaacJr Profile</title>
+<title>Isaac Jr | Official Isaac Jr Profile</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
 
@@ -157,11 +157,14 @@ text-shadow:0 0 35px rgba(59,130,246,0.35);
 }
 
 .hero-content h2{
-font-size:42px;
+font-size:52px;
 font-family:'Caveat',cursive;
-letter-spacing:2px;
+letter-spacing:3px;
 margin-bottom:25px;
 font-weight:700;
+transform:rotate(-2deg);
+text-shadow:0 0 25px rgba(255,255,255,0.25);
+}
 }
 
 .hero-content p{
@@ -261,17 +264,54 @@ color:#3b82f6;
 margin-bottom:15px;
 }
 
-/* ABOUT */
-
-.about{
+/* ABOUT */.about{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:60px;
 align-items:center;
-}.about img{
+}
+
+.about img{
 width:100%;
 border-radius:35px;
 box-shadow:0 0 45px rgba(59,130,246,0.25);
+}
+
+/* PLAYER INFO CARDS */
+
+.player-info-cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:35px;
+}
+
+.info-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.5s;
+text-align:center;
+}
+
+.info-card:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 0 35px rgba(59,130,246,0.25);
+}
+
+.info-card h3{
+font-size:24px;
+margin-bottom:12px;
+font-family:'Caveat',cursive;
+letter-spacing:1px;
+}
+
+.info-card p{
+font-size:17px;
+color:#d1d5db;
+font-weight:600;
 }
 
 .about-text p{
@@ -518,9 +558,7 @@ View Gallery
 <div class="stat-box">
 <h3>10</h3>
 <p>Assists</p>
-</div>
-
-<div class="stat-box">
+</div><div class="stat-box">
 <h3>14</h3>
 <p>Age</p>
 </div>
@@ -549,18 +587,37 @@ I work hard every day to improve my speed, skills, creativity and performance on
 
 <br>
 
-<p>
-Position: Right Winger ⚽ <br><br>
-Nationality: Ghana 🇬🇭 <br><br>
-Strong Foot: Left <br><br>
-Playing Style: Fast • Technical • Creative
-</p>
+<div class="player-info-cards">
+
+<div class="info-card">
+<h3>⚽ Position</h3>
+<p>Right Winger</p>
+</div>
+
+<div class="info-card">
+<h3>🇬🇭 Nationality</h3>
+<p>Ghana</p>
+</div>
+
+<div class="info-card">
+<h3>👟 Strong Foot</h3>
+<p>Left Foot</p>
+</div>
+
+<div class="info-card">
+<h3>🔥 Playing Style</h3>
+<p>Fast • Technical • Creative</p>
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="gallery" id="gallery"><h2 class="section-title">Football Gallery</h2>
+<section class="gallery" id="gallery">
+
+<h2 class="section-title">Football Gallery</h2>
 
 <div class="gallery-container">
 
@@ -584,7 +641,7 @@ Feel free to contact me.
 
 <div class="contact-links">
 
-<a href="mailto:isacike863@gmail.com">
+<a href="mailto:isaacike863@gmail.com">
 📧 Email
 </a>
 
@@ -605,7 +662,7 @@ Feel free to contact me.
 </section>
 
 <footer>
-© 2026 Isaac Jr | Official Isaac Jr Profile
+© 2026 Isaac Junior | Official Isaac Jr Profile
 </footer>
 
 <script>
