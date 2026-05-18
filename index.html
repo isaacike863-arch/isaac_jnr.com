@@ -1,374 +1,733 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Isaac Jr | Football Portfolio</title>
+<title>Isaac Jr | Official Isaac Jr Profile</title>
 
-<!-- GOOGLE FONTS -->
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Montserrat',sans-serif;
 }
 
 body{
-    font-family:'Poppins', sans-serif;
-    background:linear-gradient(to bottom,#000000,#0f172a);
-    color:white;
-    overflow-x:hidden;
+background:#050505;
+color:white;
+overflow-x:hidden;
+background:
+radial-gradient(circle at top left,#2563eb22,transparent 25%),
+radial-gradient(circle at bottom right,#9333ea22,transparent 25%),
+#020617;
 }
 
-/* HERO SECTION */
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+z-index:1000;
+}
+
+.logo{
+font-size:34px;
+font-weight:900;
+letter-spacing:2px;
+background:linear-gradient(90deg,#f59e0b,#ef4444,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:700;
+position:relative;
+}
+
+nav ul li a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#3b82f6;
+transition:0.4s;
+}
+
+nav ul li a:hover::after{
+width:100%;
+}
+
+/* HERO */
 
 .hero{
-    text-align:center;
-    padding:90px 20px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+padding:0 20px;
 }
 
-.hero img{
-    width:230px;
-    height:230px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #00ff88;
-    box-shadow:0 0 40px rgba(0,255,136,0.5);
+/* SLIDESHOW */
+
+.slider{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-2;
+background:black;
 }
 
-.hero h1{
-    font-size:65px;
-    margin-top:25px;
-    color:#00ff88;
-    font-family:'Great Vibes', cursive;
+.slide{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:contain;
+object-position:center;
+opacity:0;
+transition:2s ease;
 }
 
-.hero h2{
-    font-size:28px;
-    margin-top:10px;
-    color:white;
-    font-weight:300;
-    letter-spacing:2px;
+.slide.active{
+opacity:1;
 }
 
-.hero p{
-    max-width:850px;
-    margin:auto;
-    margin-top:25px;
-    font-size:19px;
-    color:#d1d5db;
-    line-height:1.9;
+/* OVERLAY */
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to top,rgba(0,0,0,0.95),rgba(0,0,0,0.45));
+z-index:-1;
+}
 }
 
-/* QUOTE */
+/* HERO CONTENT */
 
-.quote{
-    text-align:center;
-    padding:30px 20px;
+.hero-content{
+max-width:1000px;
+animation:fadeUp 1.5s ease;
 }
 
-.quote h1{
-    font-family:'Great Vibes', cursive;
-    color:#00ff88;
-    font-size:45px;
+.hero-content h1{
+font-size:95px;
+font-weight:900;
+line-height:1;
+margin-bottom:20px;
+text-transform:uppercase;
+letter-spacing:3px;
+font-family:'Montserrat',sans-serif;
+background:linear-gradient(90deg,#06b6d4,#3b82f6,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 35px rgba(59,130,246,0.35);
+}
+}
+
+.hero-content h2{
+font-size:52px;
+font-family:'Caveat',cursive;
+letter-spacing:2px;
+margin-bottom:25px;
+font-weight:700;
+color:white;
+text-shadow:0 0 20px rgba(255,255,255,0.2);
+}
+}
+}
+
+.hero-content p{
+max-width:850px;
+margin:auto;
+font-size:21px;
+line-height:2;
+color:#e5e7eb;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+margin-top:45px;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:18px 42px;
+border-radius:50px;
+text-decoration:none;
+font-weight:800;
+transition:0.4s;
+letter-spacing:1px;
+font-size:16px;
+}
+
+.btn-primary{
+background:linear-gradient(90deg,#f59e0b,#ef4444);
+color:white;
+box-shadow:0 0 25px rgba(239,68,68,0.45);
+}
+}
+
+.btn-primary:hover{
+transform:translateY(-6px) scale(1.05);
+}
+
+.btn-secondary{
+border:2px solid #f59e0b;
+color:white;
+}
+}
+
+.btn-secondary:hover{
+background:#3b82f6;
+transform:translateY(-6px);
+}
+
+/* SECTION */
+
+section{
+padding:120px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:60px;
+font-weight:900;
+margin-bottom:70px;
+background:linear-gradient(90deg,#f59e0b,#ef4444,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 /* STATS */
 
 .stats{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-    padding:50px 20px;
+background:#0f172a;
+}
+
+.stats-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
 }
 
 .stat-box{
-    background:#111827;
-    padding:30px;
-    width:230px;
-    border-radius:25px;
-    text-align:center;
-    transition:0.4s;
-    box-shadow:0 0 20px rgba(0,255,136,0.2);
+background:rgba(255,255,255,0.04);
+padding:50px;
+border-radius:30px;
+text-align:center;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.5s;
 }
 
 .stat-box:hover{
-    transform:translateY(-10px) scale(1.03);
-}
-
-.stat-box h2{
-    font-size:38px;
-    color:#00ff88;
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(59,130,246,0.3);
+}.stat-box h3{
+font-size:70px;
+color:#3b82f6;
+margin-bottom:15px;
 }
 
 /* ABOUT */
 
 .about{
-    text-align:center;
-    padding:70px 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
 
-.about h1{
-    color:#00ff88;
-    font-size:45px;
-    margin-bottom:20px;
-    font-family:'Great Vibes', cursive;
+.about img{
+width:100%;
+border-radius:35px;
+box-shadow:0 0 45px rgba(59,130,246,0.25);
 }
 
-.about p{
-    max-width:900px;
-    margin:auto;
-    line-height:2;
-    color:#d1d5db;
-    font-size:18px;
+/* PLAYER INFO CARDS */
+
+.player-info-cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:35px;
+}
+
+.info-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.5s;
+text-align:center;
+}
+
+.info-card:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 0 35px rgba(59,130,246,0.25);
+}
+
+.info-card h3{
+font-size:24px;
+margin-bottom:12px;
+font-family:'Caveat',cursive;
+letter-spacing:1px;
+}
+
+.info-card p{
+font-size:17px;
+color:#d1d5db;
+font-weight:600;
+}
+
+.about-text p{
+font-size:20px;
+line-height:2;
+color:#d1d5db;
 }
 
 /* GALLERY */
 
 .gallery{
-    padding:70px 20px;
-    text-align:center;
+background:#0f172a;
 }
 
-.gallery h1{
-    color:#00ff88;
-    margin-bottom:30px;
-    font-size:50px;
-    font-family:'Great Vibes', cursive;
+.gallery-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
-.gallery-text{
-    max-width:800px;
-    margin:auto;
-    color:#d1d5db;
-    margin-bottom:40px;
-    line-height:1.8;
+.gallery-container img{
+width:100%;
+height:380px;
+object-fit:cover;
+border-radius:25px;
+transition:0.5s;
 }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.gallery-grid img{
-    width:100%;
-    border-radius:20px;
-    transition:0.4s;
-    box-shadow:0 0 20px rgba(255,255,255,0.1);
-}
-
-.gallery-grid img:hover{
-    transform:scale(1.05);
-}
-
-/* REVIEWS */
-
-.reviews{
-    padding:70px 20px;
-    text-align:center;
-}
-
-.reviews h1{
-    color:#00ff88;
-    margin-bottom:30px;
-    font-size:45px;
-    font-family:'Great Vibes', cursive;
-}
-
-.review-card{
-    background:#111827;
-    padding:30px;
-    margin:20px auto;
-    width:80%;
-    border-radius:25px;
-    box-shadow:0 0 20px rgba(255,255,255,0.1);
+.gallery-container img:hover{
+transform:scale(1.05);
 }
 
 /* CONTACT */
 
-.contact{
-    text-align:center;
-    padding:80px 20px;
+/* DREAM SECTION */
+
+.dream-section{
+background:#0f172a;
 }
 
-.contact h1{
-    color:#00ff88;
-    margin-bottom:25px;
-    font-size:50px;
-    font-family:'Great Vibes', cursive;
+.dream-box{
+max-width:1000px;
+margin:auto;
+background:rgba(255,255,255,0.05);
+padding:50px;
+border-radius:30px;
+text-align:center;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.dream-box p{
+font-size:22px;
+line-height:2;
+color:#d1d5db;
+font-family:'Caveat',cursive;
+letter-spacing:1px;
+}
+
+.contact{
+text-align:center;
 }
 
 .contact p{
-    max-width:700px;
-    margin:auto;
-    margin-bottom:35px;
-    color:#d1d5db;
-    line-height:1.8;
+font-size:20px;
+margin-bottom:45px;
+color:#d1d5db;
 }
 
-.contact a{
-    display:inline-block;
-    text-decoration:none;
-    background:#00ff88;
-    color:black;
-    padding:16px 32px;
-    border-radius:40px;
-    margin:12px;
-    font-weight:bold;
-    transition:0.3s;
-    box-shadow:0 0 15px rgba(0,255,136,0.3);
+.contact-links{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
 }
 
-.contact a:hover{
-    background:white;
-    transform:scale(1.08);
+.contact-links a{
+padding:18px 38px;
+border-radius:50px;
+text-decoration:none;
+font-weight:800;
+transition:0.5s;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+color:white;
+}
+
+.contact-links a:hover{
+background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+transform:translateY(-6px);
 }
 
 /* FOOTER */
 
 footer{
-    text-align:center;
-    padding:25px;
-    background:black;
-    color:gray;
-    margin-top:40px;
-    font-size:15px;
+padding:35px;
+text-align:center;
+background:#050505;
+font-size:15px;
+color:#9ca3af;
+}
+
+@keyframes zoomText{
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.05);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(60px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* COLORFUL TEXT EFFECT */
+
+b,
+strong,
+h1,
+h2,
+h3,
+.section-title,
+.logo,
+.stat-box p,
+.hero-content h2{
+
+background:linear-gradient(
+90deg,
+#3b82f6,
+#8b5cf6,
+#06b6d4,
+#ffffff,
+#3b82f6
+);
+
+background-size:300% 300%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:gradientMove 6s linear infinite;
+
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:60px;
+}
+
+.hero-content h2{
+font-size:28px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+.section-title{
+font-size:42px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO -->
+<nav>
+<div class="logo">ISAAC JR</div>
+
+<ul>
+<li><a href="#stats">Stats</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
 <section class="hero">
 
-<img src="images/profile.jpg" alt="Isaac Jr">
+<div class="slider">
 
-<h1>Isaac Jr ⚽</h1>
+<img src="photo1.jpg" class="slide active">
+<img src="photo2.jpg" class="slide">
+<img src="photo3.jpg" class="slide">
+<img src="photo4.jpg" class="slide">
+<img src="photo5.jpg" class="slide">
+<img src="photo6.jpg" class="slide">
+<img src="photo7.jpg" class="slide">
+<img src="photo8.jpg" class="slide">
+<img src="photo9.jpg" class="slide">
+<img src="photo10.jpg" class="slide">
 
-<h2>Young Football Talent From Ghana</h2><p>
-A passionate footballer with dreams, discipline and determination to reach the highest level of the game. 
-Every training session, every match and every moment on the pitch is another opportunity to grow stronger, faster and better. 
-Football is more than a game — it is my lifestyle, my ambition and my future.
+</div>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>ISAAC JR</h1>
+
+<h2>Official Isaac Jr Profile ⚽</h2><p>
+Young talented football player from Ghana focused on becoming a professional footballer.
+Fast, creative, hardworking and passionate about the game.
+Open for football trials, scouts and opportunities worldwide.
 </p>
 
+<div class="hero-buttons">
+
+<a href="#contact" class="btn btn-primary">
+Contact Me
+</a>
+
+<a href="#gallery" class="btn btn-secondary">
+View Gallery
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- QUOTE -->
+<section class="stats" id="stats">
 
-<section class="quote">
+<h2 class="section-title">Player Stats</h2>
 
-<h1>"Dream Big. Work Hard. Stay Humble."</h1>
-
-</section>
-
-<!-- STATS -->
-
-<section class="stats">
+<div class="stats-container">
 
 <div class="stat-box">
-<h2>10K+</h2>
-<p>Website Views</p>
+<h3>21</h3>
+<p>Matches</p>
 </div>
 
 <div class="stat-box">
-<h2>⭐ 4.9</h2>
-<p>Player Rating</p>
+<h3>10</h3>
+<p>Goals</p>
 </div>
 
 <div class="stat-box">
-<h2>🔥 Trending</h2>
-<p>Young Talent</p>
+<h3>12</h3>
+<p>Assists</p>
 </div>
 
 <div class="stat-box">
-<h2>⚽ RW</h2>
+<h3>14</h3>
+<p>Age</p>
+</div>
+
+<div class="stat-box">
+<h3>RW</h3>
 <p>Position</p>
 </div>
 
+</div>
+
 </section>
 
-<!-- ABOUT -->
+<section class="about" id="about">
 
-<section class="about">
+<img src="about.jpg">
 
-<h1>About Me</h1>
+<div class="about-text">
+
+<h2 class="section-title">About Me</h2>
 
 <p>
-I am a hardworking and confident football player focused on improving every single day. 
-I love creating chances, attacking with speed and helping my team win games. 
-My dream is to play professional football at the highest level and inspire young players around the world through dedication and passion.
+I am Isaac Jr, a dedicated football player with dreams of playing professional football at the highest level.
+I work hard every day to improve my speed, skills, creativity and performance on the field.
 </p>
 
-</section>
+<br>
 
-<!-- GALLERY -->
+<div class="player-info-cards">
 
-<section class="gallery">
+<div class="info-card">
+<h3>⚽ Position</h3>
+<p>Right Winger</p>
+</div>
 
-<h1>Football Gallery</h1>
+<div class="info-card">
+<h3>🇬🇭 Nationality</h3>
+<p>Ghana</p>
+</div>
 
-<p class="gallery-text">
-A collection of football moments, training sessions, match highlights and memories from my football journey. 
-Every picture tells a story of hard work, growth and love for the beautiful game.
-</p>
+<div class="info-card">
+<h3>👟 Strong Foot</h3>
+<p>Left Foot</p>
+</div>
 
-<div class="gallery-grid">
+<div class="info-card">
+<h3>🔥 Playing Style</h3>
+<p>Fast • Technical • Creative</p>
+</div>
 
-<img src="images/pic1.jpg">
-<img src="images/pic2.jpg">
-<img src="images/pic3.jpg">
-<img src="images/pic4.jpg">
+</div>
 
 </div>
 
 </section>
 
-<!-- REVIEWS -->
+<section class="gallery" id="gallery">
 
-<section class="reviews">
+<h2 class="section-title">Football Gallery</h2>
 
-<h1>Player Reviews</h1>
+<div class="gallery-container">
 
-<div class="review-card">
-<h2>⭐⭐⭐⭐⭐</h2>
-<p>"Excellent movement and confidence on the ball."</p>
-</div>
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
 
-<div class="review-card">
-<h2>⭐⭐⭐⭐⭐</h2>
-<p>"Very talented young football player with huge potential."</p>
-</div>
-
-<div class="review-card">
-<h2>⭐⭐⭐⭐☆</h2>
-<p>"Hardworking player with speed, vision and discipline."</p>
 </div>
 
 </section>
 
-<!-- CONTACT -->
+<section class="achievements">
 
-<section class="contact">
+<h2 class="section-title">Player Highlights</h2>
 
-<h1>Connect With Me</h1>
+<div class="stats-container">
+
+<div class="stat-box">
+<h3>⚡</h3>
+<p>Explosive Pace</p>
+</div>
+
+<div class="stat-box">
+<h3>🎯</h3>
+<p>Creative Passing</p>
+</div>
+
+<div class="stat-box">
+<h3>🔥</h3>
+<p>1v1 Dribbling</p>
+</div>
+
+<div class="stat-box">
+<h3>💪</h3>
+<p>Strong Mentality</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="dream-section">
+
+<h2 class="section-title">Dream & Vision</h2>
+
+<div class="dream-box">
 
 <p>
-Follow my football journey, connect with me on social media and stay updated with my latest football content, highlights and training sessions.
+My dream is to become one of the best football players in the world.
+I train hard every day to improve my speed, technique, dribbling, creativity and finishing.
+I am looking for football opportunities, academy trials, scouts and professional development.
 </p>
 
-<a href="https://wa.me/233536731019" target="_blank">
-💬 WhatsApp
-</a>
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<p>
+Interested in football opportunities, scouting or collaborations?
+Feel free to contact me.
+</p>
+
+<div class="contact-links">
 
 <a href="mailto:isaacike863@gmail.com">
 📧 Email
@@ -386,13 +745,45 @@ Follow my football journey, connect with me on social media and stay updated wit
 ▶️ YouTube
 </a>
 
+</div>
+
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-© 2026 Isaac Jr Football Portfolio • Designed For Greatness ⚽
+© 2026 Isaac Jr | Official Isaac Jr Profile
 </footer>
+
+<script>
+
+const slides = document.querySelectorAll('.slide');
+
+let current = 0;
+
+function showSlide(index){
+
+slides.forEach(slide=>{
+slide.classList.remove('active');
+});
+
+slides[index].classList.add('active');
+
+}
+
+setInterval(()=>{
+
+current++;
+
+if(current >= slides.length){
+current = 0;
+}
+
+showSlide(current);
+
+},4000);
+
+/* PLAYER WEBSITE ACTIVE */
+
+</script>
 
 </body>
 </html>
